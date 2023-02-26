@@ -1,0 +1,226 @@
+@import url('./reset.css');
+
+:root {
+  --primary-Light-red: hsl(0, 100%, 67%);
+  --primary-Orangey-yellow: hsl(39, 100%, 56%);
+  --primary-Green-teal: hsl(166, 100%, 37%);
+  --primary-Cobalt-blue: hsl(234, 85%, 45%);
+  --gradients-Light-slate-blue-background: hsl(252, 100%, 67%);
+  --gradients-Light-royal-blue-background: hsl(241, 81%, 54%);
+  --gradients-Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --gradients-Persian-blue-circle: hsla(241, 72%, 46%, 0);
+  --neutral-White: hsl(0, 0%, 100%);
+  --neutral-Pale-blue: hsl(221, 100%, 96%);
+  --neutral-Light-lavender: hsl(241, 100%, 89%);
+  --neutral-Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 90em;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-White);
+}
+
+.main {
+  padding: 1em;
+}
+
+.card__wrapper {
+  box-shadow: 5px 5px 15px 1px hsla(0, 0%, 0%, 0.1);
+  border-radius: 1.5em;
+  height: 30em;
+  width: 100%;
+  max-width: 40em;
+  display: flex;
+  overflow: hidden;
+}
+
+.card__top {
+  flex: 1;
+  background-color: hsla(256, 72%, 46%, 1);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 2em;
+  border-radius: 1.5em;
+}
+
+.card__circle {
+  width: 9em;
+  height: 9em;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.circle__title {
+  font-size: 3.5em;
+  font-weight: 800;
+  color: var(--neutral-White);
+  margin: .35em 0 0 0;
+}
+
+.circle__subtitle {
+  font-size: .8em;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.top__title {
+  font-size: 1.1em;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.top__subtitle {
+  font-size: 1.6em;
+  font-family: 600;
+}
+
+.top__text {
+  font-size: 1em;
+  text-align: center;
+  width: 85%;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+
+.card__bottom {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3em 2em;
+}
+
+.bottom__title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--neutral-Dark-gray-blue);
+}
+
+.card__minicards {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+}
+
+.card__minicard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: .4em;
+  padding: 1em;
+}
+
+.minicard1 {
+  background-color: hsla(0, 100%, 67%,.1);
+}
+
+.minicard2 {
+  background-color: hsla(39, 100%, 56%,.1);
+}
+
+.minicard3 {
+  background-color: hsla(166, 100%, 37%,.1);
+}
+
+.minicard4 {
+  background-color: hsla(241, 100%, 89%,.2);
+}
+
+.minicard1 .minicard__text {
+  color: var(--primary-Light-red);
+}
+
+.minicard2 .minicard__text {
+  color: var(--primary-Orangey-yellow);
+}
+
+.minicard3 .minicard__text {
+  color: var(--primary-Green-teal);
+}
+
+.minicard4 .minicard__text {
+  color: var(--primary-Cobalt-blue);
+}
+
+.minicard__wrapper {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+}
+
+.minicard__text {
+  font-weight: 600;
+}
+
+.card__minicard p, .minicard__number2{
+  font-size: 1em;
+  font-weight: 600;
+  color: hsla(224, 30%, 27%,.5);
+  margin: 0 0 0 .4em;
+}
+
+.minicard__number1 {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--neutral-Dark-gray-blue);
+  margin: 0 .4em 0 0;
+} 
+
+.bottom__continue {
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: var(--neutral-Dark-gray-blue);
+  width: 100%;
+  padding: .9em;
+  text-align: center;
+  border-radius: 2em;
+  transition: all .5s ease;
+}
+
+.bottom__continue:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media screen and (max-width:449px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .main {
+    padding: 0;
+  }
+  .card__wrapper {
+    width: 100%;
+    flex-flow: column nowrap;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .card__top {
+    border-radius: 0 0 2em 2em;
+    gap: 1.8em;
+    padding: 2.5em 2em;
+  }
+
+  .card__bottom {
+    gap: 1.5em;
+    padding: 2.5em 2em;
+  }
+}
