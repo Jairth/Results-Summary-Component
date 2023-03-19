@@ -87,6 +87,7 @@ body {
 .top__subtitle {
   font-size: 1.6em;
   font-family: 600;
+  color: var(--neutral-White);
 }
 
 .top__text {
@@ -187,6 +188,7 @@ body {
   font-size: 1.1em;
   font-weight: 600;
   background-color: var(--neutral-Dark-gray-blue);
+  color: var(--neutral-White);
   width: 100%;
   padding: .9em;
   text-align: center;
